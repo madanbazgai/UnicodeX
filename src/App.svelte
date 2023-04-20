@@ -17,18 +17,16 @@
 </script>
 
 <div class:dark>
-  <div class="bg-white dark:bg-gray-800 dark:text-white h-screen">
+  <div class="h-screen bg-white dark:bg-gray-800 dark:text-white">
     <div
-      class="flex justify-between items-center dark:bg-gray-950 px-3 lg:px-14 py-2 shadow-md"
+      class="flex items-center justify-between px-3 py-1 shadow-md dark:bg-gray-950 lg:px-14"
     >
-      <h1 class="font-nothing font-extrabold text-lg md:text-[30px]">
-        UnicodeX
-      </h1>
+      <h1 class="font-nothing font-extrabold md:text-[25px]">UnicodeX</h1>
       {#if dark}
         <button on:click={toggleDark}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10 cursor-pointer"
+            class="w-10 h-10 cursor-pointer"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -41,7 +39,7 @@
         <button on:click={toggleDark}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10 cursor-pointer"
+            class="w-10 h-10 cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -57,27 +55,29 @@
       {/if}
     </div>
 
-    <div class="text-center max-w-lg mt-3 mx-auto">
-      <label for="english-text">Enter English text:</label> <br />
+    <div class="mx-2 mt-3 text-center">
+      <label class="font-bold" for="english-text">Enter English text:</label>
+      <br />
       <textarea
-        class="box-border px-1 mx-1 w-full h-52 border border-gray-300 bg-white dark:bg-gray-900 dark:text-white"
+        class=" w-full px-1 mb-1 bg-white border rounded-md outline-none border-gray-400 h-72 md:h-60 dark:bg-gray-900 dark:text-white md:max-w-4xl"
         id="english-text"
         bind:value={englishText}
         on:input={handleInputChange}
         name=""
       />
-      <p>Romanized Nepali text:</p>
+      <p class="font-bold">Romanized Nepali text:</p>
 
-      <p
-        class="h-52 px-1 mx-1 w-full text-left dark:bg-gray-900 border border-gray-300"
-      >
-        {nepaliText}
-      </p>
-      <CopyToClipboard text={nepaliText} />
+      <div class="relative md:max-w-4xl mx-auto">
+        <p
+          class=" px-1 mb-2 mx-1 text-left border rounded-md border-gray-400 h-72 md:h-60 dark:bg-gray-900"
+        >
+          {nepaliText}
+        </p>
+        <CopyToClipboard text={nepaliText} />
+      </div>
     </div>
-    <p class="font-nothing text-xs text-center">
-      {" "}
-      &copy; Designed & Developed by{" "}
+    <p class="text-xs text-center font-nothing absolute bottom-2 translate-x-1/2 right-[50%]">
+      &copy; Designed & Developed by
       <a class="underline" href="https://madanbajgai.com.np">MadanBazgai</a
       >{" "}
     </p>
