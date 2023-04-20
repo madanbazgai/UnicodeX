@@ -21,7 +21,7 @@
     <div
       class="flex items-center justify-between px-3 py-1 shadow-md dark:bg-gray-950 lg:px-14"
     >
-      <h1 class="font-nothing font-extrabold md:text-[25px]">UnicodeX</h1>
+      <h1 class="unicodex font-nothing font-extrabold md:text-[25px]">UnicodeX</h1>
       {#if dark}
         <button on:click={toggleDark}>
           <svg

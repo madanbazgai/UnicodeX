@@ -8,7 +8,7 @@
     success = true;
     setTimeout(() => {
       success = false;
-    }, 1000);
+    }, 500);
   }
 </script>
 
