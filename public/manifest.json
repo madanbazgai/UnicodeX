@@ -1,4 +1,8 @@
 {
+  "dir": "ltr",
+  "lang": "en",
+  "orientation": "any",
+  "prefer_related_applications": false,
   "name": "UnicodeX",
   "description": "A English text to Nepali romanized text converter app",
   "short_name": "UnicodeX",
@@ -40,6 +44,12 @@
       "purpose": "any"
     },
     {
+      "src": "./icons/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
       "src": "./icons/favicon-384x384.png",
       "type": "image/png",
       "sizes": "384x384",
@@ -49,9 +59,21 @@
       "src": "./icons/favicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
       "purpose": "maskable"
     }
   ],
+  "features": [
+    "Cross Platform",
+    "low-latency inking",
+    "fast",
+    "useful AI"
+],
   "scope": "/",
   "start_url": "/?source=pwa",
   "display": "standalone",
